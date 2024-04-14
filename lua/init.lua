@@ -17,7 +17,7 @@ function M.setup()
     end
 
     -- Create a key mapping for the custom paste function
-    vim.api.nvim_set_keymap('n', 'p', '<cmd>lua require("nvim-paste-clean").custom_paste()<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', 'p', '<cmd>lua require("nvim-clean-paste").custom_paste()<CR>', { noremap = true, silent = true })
 
     -- Set up the autocmd for TextYankPost event
     vim.api.nvim_create_autocmd("TextYankPost", {
