@@ -40,8 +40,8 @@ function M.custom_paste()
     -- Get the contents of the unnamed register
     local content = vim.fn.getreg('"')
 
-    -- Remove \r characters from the content
-    content = string.gsub(content, "\r", "")
+    -- Remove ^M characters from the content
+    content = content:gsub('\r', '')
 
     -- Set the modified content back to the unnamed register
     vim.fn.setreg('"', content)
